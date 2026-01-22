@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+# Keep the processed dataset out of git by default
+df_power.csv
+
+.venv/
+__pycache__/
+.uv/
