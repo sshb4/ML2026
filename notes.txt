@@ -1,0 +1,66 @@
+2/4/2026:
+
+Evaluation
+- Clear labels and definitions, capable of actually evaluating "success"
+
+Model -> Predictions -> Decisions
+
+Accuracy = correct predictions/total predictions
+    Defined on any of the sets of data, training set, testing set, or validation set
+
+lower loss = higher accuracy
+
+Classification and Regression are subsets under Supervised
+
+Threshold - setting the line between yes and no
+- Sets the boundary of risk tolerance
+- Varies by context and the goals of the individual project
+
+Confusion Matrix - true positive, false positive, true negative, false negative
+
+1. define threshold
+2. for each x,y in dataset # "row in spreadsheet"
+        y^ = model(x) > threshold
+        # turn into yes or no
+        if y == 1:
+            if y^ == 1:
+                TP ++
+            else if y^ == 0:
+                FN ++
+        else if y == 0:
+            if y^ == 0:
+                TN ++
+            else if y^ == 1:
+                FP ++
+
+Threshold of baseball set - ?
+
+Precision is measuring accuracy of positives only
+Precision = TP/(TP+FP)
+
+Recall
+
+What is more important, minimizing false positives or false negatives?
+
+F1 score = 2TP/(2TP + FP + FN)
+- weighted average
+
+If precision OR recall is bad, F1 will be bad
+- It will not tell you which one is bad however
+
+ROC - receiver operating characteristic
+
+TPR = bottom row
+FPR = top row
+
+ROC curve - train model, then testing different thresholds
+
+AUC - area under the ROC curve
+- highest possible is 1 (1 is good)
+
+AUC can look good even if its imbalanced, but usually high is good
+
+Precision-Recall curve - focus on positive class behavior
+
+
+
